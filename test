@@ -1,0 +1,49 @@
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+   function ab(input){
+    //   console.log(ab)
+       var dict = {"Mon": 0,"Tue" : 0, "Wed" : 0, "Thu" : 0, "Fri" : 0, "Sat" :0,"Sun" : 0}
+       for (const [key, value] of Object.entries(input)) {
+           console.log(key + ":" + value)
+           const d = new Date(key);
+           let day = d.getDay()
+           if (day == 0){
+               dict["Sun"] += value
+           }
+           else if (day == 1){
+               dict["Mon"] += value
+           }
+           else if (day == 2){
+               dict["Tue"] += value
+           }
+           else if (day == 3){
+               dict["Wed"] += value
+           }
+           else if (day == 4){
+               dict["Thu"] += value
+           }
+           else if (day == 5){
+               dict["Fri"] += value
+           }
+           else {
+               dict["Sat"] += value
+           }
+       }
+    for (const[key,value] of Object.entries(dict)){
+        console.log(key,value)
+           }
+        //   console.log(day)
+        
+   } 
+  const inputDictionary = {
+  "2020-01-01": 4,
+  "2020-01-02": 4,
+  "2020-01-03": 6,
+  "2020-01-04": 8,
+  "2020-01-05": 2,
+  "2020-01-06": -6,
+  "2020-01-07": 2,
+  "2020-01-08": -2
+};
+ab(inputDictionary);
+console.log("Welcome to Programiz!");
